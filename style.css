@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    display: grid;
+    background-color: black;
+    grid-template-rows: 1fr 6fr;
+    font-family: "Roboto" , sans-serif;
+}
+.header {
+    display: flex;
+    grid-column: 1 / 2;
+    padding:15px;
+    background-color: #e5a00d;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 5px grey;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+.library {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(15vw,1fr));
+}
+.addBook {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid grey;
+    font-size:50px;
+    color:grey;
+}
+.addBookWrapperContainer {
+    text-align: center;
+}
+.modal {
+    width: clamp(150px,20vw,200px);
+    --width: clamp(150px,20vw,200px) / 2;
+    height:375px;
+    padding:15px;
+    display: none;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    top: calc(50vh - 175px);
+    left: calc(50vw - var(--width));
+    background-color: grey;
+}
+input[type="submit"]{
+    width:75px;
+}
+form {
+    gap:10px;
+    display: flex;
+    flex-direction: column;
+}
+.modalHeader {
+    font-size: 2.5rem;
+    position:relative;
+    height: 2.5rem;
+    flex-shrink: 0;
+    z-index: 2;
+    align-self: flex-end;
+    cursor:pointer;
+}
+.addBook:hover {
+    background-color: rgb(61, 61, 61);
+    box-shadow: 0px 0px 15px #ffa31a;
+}
+.modalFooter {
+    height: 2.5rem;
+    flex-shrink: 0;
+}

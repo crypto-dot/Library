@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="js-file.js"></script>
+</head>
+<body>
+    <div class="header"> <b>Library</b></div>
+    <div class="library">
+        <div class="addBook"><div> Add</div> <div>Book</div> <div> + </div>
+    </div>
+    </div>
+
+    <div class="modal"> 
+        <div class="modalHeader" onclick="closeModal()">&times;</div>
+    <form>
+        <label for="author" onsubmit="modalsubmit()">Author</label>
+        <input id="author" type="text" placeholder="Author" required>
+        <label for="bookName">Book Name</label>
+        <input id="bookName" type="text" placeholder="Book Name" required>
+        <label for="pageCount">Page Count</label>
+        <input id="pageCount" type="number" min=0 required>
+        <label for="haveRead">I have read</label>
+        <input type="radio" id="haveRead" name="readOrNot" required >
+        <label for="haveNotRead" >I haven't read</label>
+        <input type="radio" id="haveNotRead" name="readOrNot" required>
+
+        <input type="submit">
+    </form>
+    <div class="modalFooter">&nbsp;</div>
+    </div>
+</body>
+</html>
