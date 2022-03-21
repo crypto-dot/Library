@@ -15,8 +15,9 @@
 
     <div class="modal"> 
         <div class="modalHeader" onclick="closeModal()">&times;</div>
-    <form>
-        <label for="author" onsubmit="modalsubmit()">Author</label>
+    <form onsubmit="modalSubmit()" action= "javascript:void(0)"> 
+        <fieldset>
+        <label for="author">Author</label>
         <input id="author" type="text" placeholder="Author" required>
         <label for="bookName">Book Name</label>
         <input id="bookName" type="text" placeholder="Book Name" required>
@@ -28,6 +29,7 @@
         <input type="radio" id="haveNotRead" name="readOrNot" required>
 
         <input type="submit">
+        </fieldset>
     </form>
     <div class="modalFooter">&nbsp;</div>
     </div>
