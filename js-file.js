@@ -1,8 +1,6 @@
 const addBookElement = document.querySelector(".addBook");
 const modalWindow = document.querySelector(".modal");
 const form = document.querySelector("form");
-const divContainingBy = document.createElement("div");
-divContainingBy.textContent = "By";
 
 let library = document.querySelector(".library");
 let libraryArray = [];
@@ -16,9 +14,10 @@ function Book(bookParameters) {
     this.buildBookDOM = function () {
         let bookDiv = document.createElement("div");
         let authorText = document.createElement("div");
-
+        let divContainingBy = document.createElement("div");
         bookDiv.classList.add("book");
 
+        divContainingBy.textContent = "By";
         authorText.textContent = `${this.author}`;
         bookDiv.textContent= `${this.title}`;
 
@@ -32,7 +31,7 @@ function addingBook(e){
 }
 function modalSubmit(){
     let inputs = document.querySelectorAll(".modal > form > fieldset > input:not([type='radio'],[type='submit'])");
-    let radioInput = document.querySelector(".modal > form > fieldset > input[type='radio']");
+    let radioInput = document.querySelectorAll(".modal > form > fieldset > div > input[type='radio']");
     let bookParameters = [];
     inputs.forEach(input => bookParameters.push(input.value));
     bookParameters.push(radioInput.id);
@@ -43,5 +42,6 @@ function modalSubmit(){
 }
 function closeModal() {
     modalWindow.style.display = "none";
+    form.reset();
 }
 addBookElement.addEventListener("click",addingBook);

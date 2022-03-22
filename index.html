@@ -22,11 +22,15 @@
         <label for="bookName">Book Name</label>
         <input id="bookName" type="text" placeholder="Book Name" required>
         <label for="pageCount">Page Count</label>
-        <input id="pageCount" type="number" min=0 required>
-        <label for="haveRead">I have read</label>
-        <input type="radio" id="haveRead" name="readOrNot" required >
-        <label for="haveNotRead" >I haven't read</label>
-        <input type="radio" id="haveNotRead" name="readOrNot" required>
+        <input id="pageCount" type="number" min=0 placeholder = "100" required>
+        <div>
+            <label for="haveRead">Have Read</label>
+            <input type="radio" id="haveRead" name="readOrNot" required >
+        </div>
+        <div>
+            <label for="haveNotRead" >Haven't Read</label>
+            <input type="radio" id="haveNotRead" name="readOrNot" required>
+        </div>
 
         <input type="submit">
         </fieldset>

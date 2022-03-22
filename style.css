@@ -10,7 +10,8 @@ body {
     padding:15px;
     background-color: #e5a00d;
     margin-bottom: 20px;
-    box-shadow: 5px 5px 5px grey;
+    box-shadow: 3px 3px 10px rgb(172, 169, 169);
+    text-shadow: 2px 2px 5px rgb(104, 104, 104);
     font-size: 2rem;
     justify-content: center;
     align-items: center;
@@ -28,7 +29,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 5px solid grey;
+    border: 5px inset #d3970c;
+    background-color: rgb(61, 61, 61);
+    text-shadow: 0 0 2px black;
     font-size:50px;
     color:grey;
 }
@@ -38,8 +41,9 @@ body {
 .modal {
     width: clamp(150px,20vw,200px);
     --width: clamp(150px,20vw,200px) / 2;
-    height:375px;
+    height:350px;
     padding:15px;
+    border: 1px solid rgb(255, 255, 255);
     display: none;
     position: absolute;
     justify-content: center;
@@ -51,7 +55,27 @@ body {
     background-color: grey;
 }
 input[type="submit"]{
-    width:75px;
+    border: none;
+    background-color: rgb(68, 68, 68);
+    width:150px;
+    height: 30px;
+}
+input {
+    width: 150px;
+    outline: none;
+}
+input[type="radio"]{
+    width: fit-content;
+}
+input[type="submit"]:hover {
+    background-color: rgb(187, 187, 187);
+}
+input:focus {
+    border-color: rgb(14, 14, 247);
+}
+input:invalid {
+    background-color: rgb(241, 146, 146);
+    border-color: red;
 }
 fieldset {
     border: none;
@@ -69,13 +93,17 @@ fieldset {
     cursor:pointer;
 }
 .addBook:hover,.book:hover {
-    background-color: rgb(61, 61, 61);
+    background-color: rgb(82, 81, 81);
     box-shadow: 0px 0px 15px #ffa31a;
 }
 .modalFooter {
     height: 2.5rem;
     flex-shrink: 0;
 }
+.book {
+    font-size: 1.2rem;
+}
+div {overflow: hidden;}
 .book:hover {
 
 }
