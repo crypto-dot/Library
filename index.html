@@ -7,6 +7,7 @@
     <script defer src="js-file.js"></script>
 </head>
 <body>
+    <div class="modal_background">&nbsp;</div>
     <div class="header"> <b>Library</b></div>
     <div class="library">
         <div class="addBook"><div> Add</div> <div>Book</div> <div> + </div>
@@ -29,9 +30,33 @@
         </div>
         <div>
             <label for="haveNotRead" >Haven't Read</label>
-            <input type="radio" id="haveNotRead" name="readOrNot" required>
+            <input type="radio" id="haveNotRead" name="readOrNot" checked required>
         </div>
 
+        <input type="submit">
+        </fieldset>
+    </form>
+    <div class="modalFooter">&nbsp;</div>
+    </div>
+
+    <div class="modal_edit"> 
+        <div class="modalHeader" onclick="closeModalEdit()">&times;</div>
+    <form onsubmit="modalEditSubmit()"  action= "javascript:void(0)"> 
+        <fieldset>
+        <label for="author">Author</label>
+        <textarea id="author" name="author" rows="2" cols="10" required> </textarea>
+        <label for="bookName">Book Name</label>
+        <textarea id="bookName" name="bookName" rows="2" cols="10" required> </textarea>
+        <label for="pageCount">Page Count</label>
+        <input type = "number" id="pageCount" name="pageCount" rows="2" cols="10" required > </input>
+        <div>
+            <label for="haveRead">Have Read</label>
+            <input type="radio" id="haveRead" name="readOrNot" required >
+        </div>
+        <div>
+            <label for="haveNotRead" >Haven't Read</label>
+            <input type="radio" id="haveNotRead" name="readOrNot" required>
+        </div>
         <input type="submit">
         </fieldset>
     </form>
