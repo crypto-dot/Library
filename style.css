@@ -129,6 +129,11 @@ fieldset {
     align-items: center;
     width: clamp(20px,15vw,400px);
     overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.bookTextWrapperContainer::-webkit-scrollbar{
+    display: none;
 }
 .text-for-book {
     text-align: center;

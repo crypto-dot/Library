@@ -14,13 +14,15 @@ let radioInputsModal = document.querySelectorAll(".modal_edit  > form > fieldset
 let library = document.querySelector(".library");
 let libraryArray = [];
 
-function Book(bookParameters) {
-    this.author = bookParameters[0];
-    this.title = bookParameters[1];
-    this.numberOfPages = bookParameters[2];
-    this.haveRead = bookParameters[3];
+class Book{
+    constructor(bookParameters){
+        this.author = bookParameters[0];
+        this.title = bookParameters[1];
+        this.numberOfPages = bookParameters[2];
+        this.haveRead = bookParameters[3];
 
-    this.buildBookDOM = function () {
+    }
+    buildBookDOM() {
 
         let deleteBookButton = document.createElement("div");
 
